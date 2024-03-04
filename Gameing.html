@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Respo Mentor</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justi_sb {
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+
+.wrapper_top_nav {
+  padding: 0px 2%;
+  height: 70px;
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  width: 9%;
+  
+}
+
+.logo img {
+  width: 75px;
+}
+
+.ullist {
+  width: 65%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.ullist ul li {
+  display: inline-block;
+  margin: 5px 35px;
+  transition: all 1s ease-in-out;
+}
+
+.ullist ul li:hover {
+  text-decoration: underline lightgreen;
+  text-underline-offset: 5px;
+}
+
+.callnow {
+  border: none;
+  margin: 0px 10px;
+  padding: 9px;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  transition: all 0.2s;
+  font-size: 12px;
+}
+
+
+
+.callnow:hover {
+  box-shadow: 2px 2px 10px white;
+}
+
+.carousel {
+  max-height: 550px;
+  background-image: url('https://www.shutterstock.com/image-illustration/3d-illustration-renderinggaming-gamer-background-260nw-2165406265.jpg');
+   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.carousel-item {
+  border-radius: 20px;
+}
+
+.carousel-inner {
+  height: 35%;
+}
+
+.carousel-inner img {
+  object-fit: contain;
+  max-height: 550px;
+  padding: 1%;
+}
+
+.section_card {
+  text-align: center;
+  margin: 4% 0%;
+  padding-top: 6%;
+  padding-bottom: 1%;
+  background-image: url('https://www.shutterstock.com/image-illustration/3d-illustration-renderinggaming-gamer-background-260nw-2165406265.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.section_card > p {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.search_bar {
+  border: 1px solid grey;
+  width: 40%;
+  margin: 2% auto;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+input {
+  border: none;
+  width: 95%;
+  outline: none;
+  padding-left: 4%;
+}
+
+.wrapper_card {
+  margin: 3% 0%;
+}
+
+.box {
+  width: 26%;
+  margin: 3% 2%;
+  position: relative;
+  perspective: 1000px;
+  border-radius: 20px;
+}
+
+.box .box_image {
+  transform: rotateY(0);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px white;
+  transition: all 0.5s ease-in-out;
+}
+
+.box:hover .box_image {
+  transform: rotateY(-90deg);
+}
+
+.box .box_image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.box .box_content {
+  box-shadow: 0px 0px 10px white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5% 2%;
+  color: white;
+  text-align: center;
+  background-color: rgba(255, 93, 255, 0.7);
+  transform: rotateY(90deg);
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+   overflow-x: hidden;
+}
+
+.box:hover .box_content {
+  transform: rotateY(0);
+}
+
+.box_content h2 {
+  font-size: 2.1em;
+  border-bottom: 1px solid white;
+}
+
+.box_content button {
+  border: none;
+  margin: 10% 0%;
+  width: 120px;
+  background-color: #8e31b0;
+  border-radius: 20px;
+  padding: 2.5%;
+  transition: all 0.5s;
+  color: white;
+  font-weight: bold;
+  outline: none;
+}
+
+.box_content button:hover {
+  box-shadow: 2px 2px 20px white;
+}
+
+.box1 {
+  width: 65vw;
+  max-height: 550px;
+  margin: 3% 20%;
+  position: relative;
+  perspective: 1000px;
+}
+
+.box1 .box_image1 {
+  transform: rotateX(0);
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px white;
+}
+
+.box1:hover .box_image1 {
+  transform: rotateX(-90deg);
+}
+
+.box1 .box_image1 img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.box1 .box_content1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5% 2%;
+  color: white;
+  text-align: center;
+  background-color: rgba(255, 93, 255, 0.7);
+  transform: rotateX(90deg);
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+  overflow-x: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px white;
+  overflow: hidden;
+}
+
+.box1:hover .box_content1 {
+  transform: rotateX(0);
+}
+
+.box_content1 h2 {
+  font-size: 2.1em;
+  border-bottom: 1px solid white;
+}
+
+.box_content1 button {
+  border: none;
+  margin: 5% 0%;
+  width: 25%;
+  background-color: #8e31b0;
+  border-radius: 20px;
+  padding: 2.5%;
+  transition: all 0.5s;
+  color: white;
+  font-weight: bold;
+}
+
+.box_content1 button:hover {
+  box-shadow: 2px 2px 20px white;
+}
+
+.sectionpu {
+  text-align: center;
+}
+
+.logo1 {
+  width: 40%;
+}
+
+.logo1 img {
+  background-color: #8e31b0;
+}
+.small_box {
+  display: flex;
+  height: max-content;
+  max-width: 26%;
+  margin: 3% 2%;
+  padding: 3% 1%;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 13px 13px 26px #666666, -13px -13px 26px #ffffff;
+}
+
+.fas,
+.far {
+  color: #8e31b0;
+}
+.alltext {
+  text-align: start;
+  padding-left: 2.5%;
+}
+
+.alltext h4 {
+  font-weight: bold;
+  margin-bottom: 8%;
+}
+.remotesection {
+  padding: 5% 0%;
+  background-image: url('https://images.template.net/222290/purple-gaming-background-edit-online.jpg');
+  background-attachment: fixed;
+  margin-top: 5%;
+}
+
+.aboutus{
+  width: 35%;
+}
+
+.aboutus img{
+  width: 100%;
+}
+
+.alltextus {
+  width: 65%;
+  align-self: flex-start;
+  padding: 3.5%;
+ background-color: rgba(227, 255, 230, 0.7);
+}
+
+.alltext > h1 {
+  font-weight: bold;
+  background-color: rgba(227, 255, 230, 0.7);
+}
+
+.small_box1 {
+  width: 48%;
+  margin-top: 6%;
+}
+
+.footer {
+  margin: 2% 0%;
+  flex-direction: column;
+}
+.icon {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px;
+}
+
+.icon i {
+  font-size: 22px;
+  margin: 0% 2%;
+}
+@media screen and (max-width:1270px){
+    ul{
+        display: none;
+    }
+    .callnow{
+        display: none;
+    }
+    .threebars .fa-bars{
+        display: block;
+         position: relative;
+         right: 30px;
+         font-size: 30px;
+    }
+
+}
+@media screen and (max-width:821px){
+    
+    .logo1{
+        width: 40%;
+    }
+       .small_box{
+        min-width: 40%;
+        
+    }
+    .box_content h2 {
+        font-size: 1.5em;
+    }
+    .sectionpu h1{
+        padding-bottom: 5%;
+    }
+    .box_content p{
+        display: none;
+    }
+    .section_card, .sectionpu, .remotesection, .alltextus{
+        padding: 8% 0%;
+    }
+    .section_card > p {
+        width: 80%;
+         
+      }
+      .aboutus{
+        width: 80%;
+      }
+      .aboutus img{
+        width: 100%;
+      }
+      .alltextus{
+        width: 100%;
+      }
+      .aboutustext{
+        width: 100%;
+        padding: 0% 13%;
+       
+        
+    }
+    .footer p{
+        text-align: center;
+        width: 65%;
+        margin: 1% 0%;
+        margin: 0 auto;
+        padding: 1% 0%;
+       
+    }
+    .search_bar {
+        width: 60%;
+       
+    }
+}
+@media screen and (max-width:580px) {
+    .box{
+        min-width: 80%;
+        margin: 8% 0%;
+    }
+
+    .box1{
+        display: none;
+    }
+
+    .small_box{
+        min-width: 80%;
+       
+    }
+    .section_card, .sectionpu, .remotesection, .alltextus{
+        padding: 12% 0%;
+    }
+    .section_card h1{
+      font-size: 2.5em;
+    }
+    .section_card p{
+      font-size: 1em;
+    }
+    .box_content h2{
+      font-size: 1.8em;
+    }
+    .box_content p{
+        display: inline-block;
+    }
+
+    .small_box{
+        margin: 8% 0%;
+    }
+    .aboutus{
+      width: 100%;
+      padding: 10%;
+       
+    }
+    .aboutus img{
+      width: 100%;
+       
+    }
+    .small_box1{
+        width: 80%;
+        margin: 0px auto;
+    }
+    .search_bar {
+        width: 85%;
+        /* border: 1px solid red; */
+    }
+    .aboutustext p {
+      font-size: 0.8em;
+    }
+    .iconhere p{
+      font-size: 0.7em;
+    }
+}
+</style>
+</head>
+<body class="rin">   
+<header>
+    <nav>
+        <div class="wrapper_top_nav flex justi_sb rin">
+                <div class="logo">
+                    <img src="https://prabhatgaming.netlify.app/allimages/logo/ff.gif" alt="">
+                </div>
+                <div class="ullist rin">
+                    <ul>
+                        <li>HOME</li>
+                        <li>ABOUT US</li>
+                        <li>PRODUCTS</li>
+                        <li>GAMES</li>
+                        <li>NEW LAUNCH</li>
+                    </ul>
+                </div>
+                <div class="last_btn rin">
+                    <button class="callnow">Contact Us</button>
+                    <button class="callnow">Support</button>
+                </div>
+                
+                </div>
+        </div>
+    </nav>
+</header>
+   <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.ctfassets.net/vfkpgemp7ek3/3644678712/6406468a1c78477709b6b9d5bd0c3841/pubg-mobile-revenue-one-billion.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+         </div>
+      </div>
+</div>
+<main>
+    <section class="section_card">
+        <h1>GAMES WE OFFER</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+       <div class="wrapper_card flex wrap justi_sa">
+          <div class="box rin">
+                <div class="box_image">
+                    <img src="https://media.wired.com/photos/6169cd38a53804056cba5f6f/master/pass/Games-Assassins-Creed-Valhalla-Music.jpg" alt="">
+                </div>
+                <div class="box_content">
+                    <h2>ASSASSINS CREED</h2>
+                    <button>PLAY NOW <img class="logo1" src="./allimages/logo/5555.gif" alt=""></button>
+                    <p>Lorem ipsum dolor sit ame idunt Lorem, ipsum pisicing fugit n uasi maiores? maiores!</p>
+                </div>
+            </div>
+            <div class="box  rin">
+                <div class="box_image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQctJ7a9q376N6tcKDwDiLHXASCH0ANEdBVcQ&usqp=CAU" alt="">
+                </div>
+                <div class="box_content">
+                    <h2>MORTAL COMBAT</h2>
+                    <button>PLAY NOW <img class="logo1" src="./allimages/logo/5555.gif" alt=""></button>
+                    <p>Lorem ipsum dolor sit ame idunt Lorem, ipsum adipisicing fugit n uasi maiores? maiores!</p>
+                </div>
+            </div>
+          <div class="box rin">
+                <div class="box_image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjIpwzPzpI_fYY5Q_x1p40BXh6LdoINA5p8w&usqp=CAU" alt="">
+                </div>
+                <div class="box_content">
+                    <h2>GOD OF WAR</h2>
+                    <button>PLAY NOW <img class="logo1" src="./allimages/logo/5555.gif" alt=""></button>
+                    <p>Lorem ipsum dolor sit ame idunt Lorem, ipsum  ur adipisicing fugit n uasi maiores? maiores!</p>
+                </div>
+            </div>
+           <div class="box1 rin ">
+                <div class="box_image1">
+                    <img src="https://www.hdwallpapers.in/download/battlefield_3_war-HD.jpg" alt="">
+                </div>
+                <div class="box_content1">
+                    <h2>BATTLEFIELD 3</h2>
+                    <button>PLAY NOW></button>
+                    <p>Lorem ipsum dolor sit ame idunt Lorem, ipsum d pisicing fugit n uasi maiores? maiores!</p>
+                </div>
+            </div>
+           <div class="box rin">
+                <div class="box_image">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/219/377/132/angry-birds-2016-wallpaper-preview.jpg" alt="">
+                </div>
+                <div class="box_content">
+                    <h2>ANGRY BIRD</h2>
+                    <button>PLAY NOW</button>
+                    <p>Lorem ipsum dolor sit ame idunt Lorem, ipsum dolor s r adipisicing fugit n uasi maiores? maiores!</p>
+                </div>
+            </div>
+          <div class="box rin">
+                <div class="box_image">
+                    <img src="https://bgr.com/wp-content/uploads/2023/11/Mario-Kart-8-Deluxe.jpg?quality=82&strip=all&resize=1400,1050" alt="">
+                </div>
+                <div class="box_content">
+                    <h2>MARIO CART</h2>
+                    <button>PLAY NOW</button>
+                    <p>Lorem ipsum dolor sit ame idunt Lorem, ipsum dolor dipisicing fugit n uasi maiores? maiores!</p>
+                </div>
+            </div>
+          <div class="box rin">
+                <div class="box_image">
+                    <img src="https://cdn-0001.qstv.on.epicgames.com/MqeuGCXkwEVdsrQadN/image/landscape_comp.jpeg" alt="">
+                </div>
+                <div class="box_content">
+                    <h2>FORTNITE</h2>
+                    <button>PLAY NOW</button>
+                    <p>Lorem ipsum dolor sit ame idunt Lorem, ipsum d pisicing fugit n uasi maiores? maiores!</p>
+                </div>
+            </div>
+            </div>
+    </section>
+     <section class="sectionpu">
+        <h1>SERVICES WE OFFER</h1>
+        <div class="main_box rin flex justi_sa wrap">
+          <div class="small_box rin">
+                <div class="iconhere rin"><i class="fas fa-magic fa-2x m-2"></i></div>
+                <div class="alltext rin">
+                    <h4>Gaming World</h4>
+                    <p>Lorem ipsum dolor sit amet,    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perferendis. molestias.</p>
+                </div>
+            </div>
+            <div class="small_box rin">
+                <div class="iconhere rin"><i class="far fa-edit fa-2x m-2"></i>  </div>
+                <div class="alltext rin">
+                    <h4>Gaming World</h4>
+                    <p>Lorem ipsum dolor sit amet,     Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perferendis. molestias.</p>
+                </div>
+            </div>
+            <div class="small_box rin">
+                <div class="iconhere rin"><i class="fas fa-city fa-2x m-2"></i></div>
+                <div class="alltext rin">
+                    <h4>Gaming World</h4>
+                    <p>Lorem ipsum dolor sit amet,    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perferendis. molestias.</p>
+                </div>
+            </div>
+             <div class="small_box rin">
+                <div class="iconhere rin"><i class="fas fa-home fa-2x m-2"></i></div>
+                <div class="alltext rin">
+                    <h4>Gaming World</h4>
+                    <p>Lorem ipsum dolor sit amet,    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perferendis. molestias.</p>
+                </div>
+            </div>
+            <div class="small_box rin">
+                <div class="iconhere rin"><i class="fas fa-tv fa-2x m-2"></i>  </div>
+                <div class="alltext rin">
+                    <h4>Gaming World</h4>
+                    <p>Lorem ipsum dolor sit amet,    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perferendis. molestias.</p>
+                </div>
+            </div>
+            <div class="small_box rin">
+                <div class="iconhere rin"><i class="fas fa-pencil-ruler fa-2x m-2"></i>  </div>
+                <div class="alltext rin">
+                    <h4>Gaming World</h4>
+                    <p>Lorem ipsum dolor sit amet,    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perferendis. molestias.</p>
+                </div>
+            </div>
+         </div>
+    </section>
+    <section class="remotesection flex wrap justi_s rin">
+            <div class="aboutus">
+                <img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fmarketplace.canva.com%2FEAFYOYC2IYs%2F1%2F0%2F400w%2Fcanva-black-and-purple-gaming-avatar-logo-gtKhbMvSPbE.jpg" alt="">
+            </div>
+            <div class="alltextus rin"> 
+            <div class="aboutustext">
+                <h1>ABOUT US</h1>
+                <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis laudantium repellat eaque cum illo natus placeat quaerat similique non eius! adipisicing elit. Cupiditate, ipsa, labore ea ipsam sit aperiam ut illum quas quibusdam nemo, voluptates sequi eveniet. Facilis, sunt.</p>
+            </div>
+
+            <div class="flex wrap justi_sa">
+                <div class="small_box1 rin ">
+                <div class="alltex rin">
+                    <div class="iconhere rin flex"> <i class="fas fa-pencil-ruler fa-2x m-2"></i> <h4>Gaming World</h4></div>
+                    <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perferendis. molestias.</p>
+                </div>
+            </div>
+             <div class="small_box1 rin ">
+                <div class="alltex rin">
+                    <div class="iconhere rin flex"><i class="fas fa-pencil-ruler fa-2x m-2"></i><h4>Gaming World</h4></div>
+                    <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, perferendis. molestias.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  <div class="footer flex wrap">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, laudantium! </p>
+      <div class="search_bar" ><input type="search" placeholder="Search your favorite game here...."><i class="fa fa-search" aria-hidden="true"  ></i></div>
+      <div class="icon">
+        <i class="fa fas fa-facebook-square" aria-hidden="true"></i>
+        <i class="fa fas fa-twitter" aria-hidden="true"></i>
+        <i class="fa fas fa-instagram" aria-hidden="true"></i>
+        <i class="fa fas fa-youtube-play" aria-hidden="true"></i>
+        <i class="fa fas fa-linkedin-square" aria-hidden="true"></i>
+      </div>
+      </div>
+</main>
+</body>
+</html>
