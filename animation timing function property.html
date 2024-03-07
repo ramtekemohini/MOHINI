@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    .box{
+        height: 100px;
+        width: 100px;
+        border: 1px solid red;
+        margin: 10px;
+        background-color: rgb(220, 226, 245);
+        animation-name: animation-prop;
+        animation-duration: 3s;
+        animation-iteration-count: 5;
+        animation-direction: alternate;
+    }
+    .box1{
+        animation-timing-function: ease;
+        background-color: aqua;
+    }
+    .box2{
+        animation-timing-function:linear ;
+        background-color: #2c3333;
+    }
+    .box3{
+        animation-timing-function: ease-in;
+        background-color: #ff5e00e7;
+    }
+    .box4{
+        animation-timing-function: ease-out;
+        background-color: #e935bc93;
+    }
+    .box5{
+        animation-timing-function: ease-in-out;
+        background-color: #29b95986;
+    }
+    .box6{
+        animation-timing-function:steps(6);
+        background-color: #0b2222;
+    }
+    
+    
+    
+
+    @keyframes animation-prop{
+    form{
+        width: 100px;
+    }
+    to{
+        width: 500px;
+    }
+}
+
+</style>
+<body>
+  
+        <div class="box box1">ease </div>
+        <div class="box box2">linear </div>
+        <div class="box box3">ease-in</div>
+        <div class="box box4">ease-out</div>
+        <div class="box box5">ease-in-out</div>
+        <div class="box box6">steps</div>
+    </div>
+</body>
+</html>
