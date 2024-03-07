@@ -1,0 +1,155 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Google Form</title> 
+    <style> 
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+    
+      margin: 0;
+      background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210903/pngtree-blue-and-red-glassmorphism-background-image_777554.jpg'); 
+      background-size: cover;
+    }
+
+    .empty-box { 
+            width: 390px; 
+            height: 300px; 
+            border: 1px solid antiquewhite; 
+            border: bold; 
+            margin-top: 100px; 
+            border-radius: 10px; 
+            text-align: center; 
+            
+        } 
+ 
+        h1 { 
+            text-align: left; 
+            font-size: 30px; 
+           
+        } 
+ 
+        input[type="text"] { 
+            border-radius: 10px; 
+            width: 250px; 
+            height: 30px; 
+            border-color: antiquewhite; 
+            float: left; 
+            outline: none;
+        } 
+ 
+        h2 { 
+            text-align: left; 
+            font-size: 30px; 
+            border: 100px;
+        } 
+ 
+        select { 
+            float: left; 
+        } 
+ 
+        h3 { 
+            float: right; 
+        } 
+ 
+        .availability-label { 
+            float: left; 
+            margin-right: 10px; 
+            clear: left; 
+        } 
+ 
+        .availability-input { 
+            float: left; 
+        } 
+        button {
+            position: relative;
+               padding: 10px 20px;
+               font-size: 20px;
+               width: 150px;
+               height: 50px;
+               top: 10vh;
+               float: left; 
+               border-radius: 50px;
+               background-color: rgb(130, 42, 165);
+
+              
+               
+             }
+       
+       p{
+        float: 100px;
+        width: 50px;
+        height: 40px;
+        top:bottom;
+
+
+       }
+        
+ 
+        .one { 
+            display: flex; 
+            gap: 120px; 
+        } 
+ 
+        .radio-buttons { 
+            clear: both; 
+            margin-top: 20px; 
+        } 
+ 
+        .radio-buttons label { 
+            margin-right: 20px; 
+        } 
+        
+        
+        
+        
+    </style> 
+</head> 
+ 
+<body> 
+    
+    <center> 
+        <div class="empty-box"> 
+            <h1>UserName</h1> 
+            <input type="text" placeholder="Eg. John Doe"> 
+ 
+            <div class="empty-box"> 
+                <div class="one"> 
+                    <div> 
+                        <h2>Country</h2> 
+                        <select name="country" id="Country"> 
+                            <option>India</option> 
+                            <option>America</option> 
+                        </select> 
+                        <div>
+                        <h1>Hobbies</h1> </div>
+                        
+                        
+ 
+                    </div> 
+                    <div> 
+                        <h2>Availability</h2> 
+                        <div class="radio-buttons"> 
+                            <label for="yes">Yes</label> 
+                            <input type="radio" id="yes" name="availability" value="yes"> 
+                            <label for="no">No</label> 
+                            <input type="radio" id="no" name="availability" value="no"> 
+                     </div> 
+                     
+                     <button type="submit">Submit</button>
+                  </div>
+                 
+                  
+                </div>
+                </div> 
+            </div> 
+        </div> 
+    </center> 
+</body> 
+ 
+</html>
