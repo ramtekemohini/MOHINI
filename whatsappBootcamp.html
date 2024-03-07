@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa{
+    color: grey;
+}
+
+.fa:hover{
+    color: black;
+}
+.main_container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 11% 89%;
+   position: fixed;
+    top: 0;
+}
+
+.top_left {
+     background-color: rgb(240, 240, 240);
+}
+
+.name_pl{
+     margin-left: 20px;
+     font-size: 18px;
+     font-weight: bold;
+}
+
+.top_right{
+    border-left: 1px solid rgb(201, 201, 201);
+    background-color: rgb(240, 240, 240);
+   
+}
+
+.top_left img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px grey;
+    margin-left: 20px;
+}
+
+.icons_top_left .fa{
+    margin-right: 20px;
+    
+}
+
+.individual_details{
+    justify-content: start;
+    padding: 12px 0px;
+    border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.all_text{
+    width: 72%;
+    margin-left: 15px;
+    margin-bottom: 1px;
+    
+    
+}
+
+.name_lastchat{
+    margin: 6px 0px;
+}
+
+.name_lastchat p{
+    font-weight: bold;
+    font-size: 17px;
+   
+}
+
+.name_lastchat span{
+    font-size: 10px;
+  
+}
+
+.last_message {
+    font-size: 14px;
+}
+.big_chat_box{
+   
+    overflow-y: scroll;
+}
+
+.child5{
+    background-color: blueviolet;
+}
+
+.child6{
+    background-color: violet;
+}
+
+.allfriend{
+    height: 92vh;
+    
+    overflow-y: scroll;
+}
+
+.onefriend{
+    background-color: rgb(42, 131, 47);
+    width: 100%;
+    height: 14%;
+    border: 1px solid white;
+}
+
+.search_bar_left{
+     justify-content: start;
+    height: 10%;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.search_bar_left input{
+    border: none;
+    height: 30px;
+    width: 261px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    margin-left: 5px;
+    padding-left: 10px;
+
+}
+.search_bar_left .fa{
+   
+    margin-left: 10px;
+    
+}
+.search_icon {
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    margin-left: 10px;
+    
+}
+.friend_image img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px grey;
+    margin-left: 20px;
+}
+.big_chat_box{
+    height: 92vh;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3CA6wxWDWjMCsLwQw8w7LIMySfESVaMt2Cl1_PrbZgu1nUWDocGHEPFDRgR_wxsK5jns&usqp=CAU');
+    opacity: 0.5;
+   
+    
+}
+.big_chat_box span{
+    margin: 15px;
+}
+.big_chat_box img{
+    width: 250px;
+}
+
+.spand{
+    background-color: bisque;
+    padding: 5px;
+    
+    border-radius: 4px;
+}
+.chat111{
+    display: inline-block;
+    margin: 15px;
+  
+    padding: 4px;
+    max-width: 45%;
+   
+    background-color: bisque;
+    border-radius: 5px;
+}
+.chat2 img{
+    display: inline-block;
+    margin: 15px;
+   
+    padding: 4px;
+    max-width: 45%;
+    
+    background-color: bisque;
+    border-radius: 5px;
+}
+.chat11{
+    text-align: end;
+    margin: 5px;
+    padding: 5px;
+    max-width: 45%;
+   
+    background-color: bisque;
+    border-radius: 5px;
+}
+.chat2 span{
+    background-color: bisque;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+.chat2{
+    
+    text-align: end;
+    margin: 10px;
+    
+}
+.bottom{
+    background-color: rgb(249, 249, 249);
+    width: 100%;
+    height: 10% ;
+    position: fixed;
+    bottom: 0;
+}
+
+.bottom_chat_box{
+    justify-content: start;
+    align-items: center;
+    margin-top: 0.65%;
+}
+
+.bottom_chat_box input{
+    width: 63%;
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+.bottom_chat_box .fa {
+    margin-left: 1%;
+}
+</style>
+</head>
+<body>
+    <div class="main_container ring">
+            <div class="top_left flexbox">
+                <div>
+                    <img src="data:image/jpeg;base64,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" alt="">
+                </div>
+                <div class="icons_top_left rin">
+                    <i class="fa fa-ellipsis-v" style="font-size: 23px"></i>
+                    <i class="fa-solid fa-envelope"style="font-size: 23px" ></i>
+                    <i class="fa-solid fa-comment-music" style="font-size: 23px"></i>
+                    
+                  </div>
+                </div>
+            <div class="top_right flexbox rin">
+                <div class="top_left flexbox">
+                    <img src="https://ventasoftware.com/wp-content/uploads/2023/08/Shinchan-Dp-12.jpg" alt="">
+                    
+                    <span class="name_pl rin">Manu....</span>
+                </div>
+                <div class="icons_top_left">
+                    <i class="fa fa-search" style="font-size: 23px"></i>
+                    <i class="fa fa-ellipsis-v" style="font-size: 23px"></i>
+                </div>
+
+            </div>
+        <div class="mid_left">
+            <div class="search_bar_left flexbox rin">
+                <div class=" search_icon rin">
+                <i class="fa fa-search" style="font-size: 16px"></i>
+                <input type="search" placeholder="Search or start new chat">
+            </div>
+                <i class="fa fa-ellipsis-v" style="font-size: 23px"></i>
+                </div>
+           <div class="allfriend "> 
+                <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwJEeeAhorkwYJpp0uO3MOI5COwwzvqpUomN7t6nDLF6LFaMCGm4UXwlKbqu8x5j6svjg&usqp=CAUg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Mohini </p>
+                            <span>Today</span>
+                           </div>
+                        <div class="last_message rin">Hi</div>
+                    </div>
+                </div>
+                <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjhnNdkDC5Z2k2qYkhpOam479TYTWd2TQ4oqGhYL0iw_XkEl0fMvVef6WOZ0SfKjDte6E&usqp=CAU" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Shinchan</p>
+                            <span>yesterday</span>
+                           </div>
+                        <div class="last_message rin">Lorem, ipsum.</div>
+                    </div>
+                </div>
+               <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsqMZZqHv-lat0JPdoF_W7lpXE1RDsrtqDz6JIOp2OqbMPY87JX0i4_b0oWp3VVx2EbOc&usqp=CAU" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Ragini</p>
+                            <span>yesterday</span>
+                            </div>
+                        <div class="last_message rin">Hi</div>
+                    </div>
+                </div>
+                <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGI3MijM60lYWaEAUTYGOrqg2oCEoPRSVCDqgbyaHE6EXewAa4QB5cby6GO0Qpifj0Mu4&usqp=CAU" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Doremon</p>
+                                <i class="fa fa-heart" style="font-size:13px;color:red"></i>
+                              </p>
+                            <span>22/10/2022</span>
+                        </div>
+                        <div class="last_message rin">Hello World</div>
+                    </div>
+                </div>
+                 <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuAbTP2xkVgC6-uIbmJkY4V5MUHzXSCGi8pQ&usqp=CAU" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Hatori</p>
+                            <span>14/10/2022</span>
+                            </div>
+                        <div class="last_message rin">Plan a trip</div>
+                    </div>
+                </div>
+                 <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgyGus-iek6tCjNRJGcYHSVQykI-qHZ15kQQ&usqp=CAU" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Shijuka</p>
+                            <span>21/10/2022</span>
+                            </div>
+                        <div class="last_message rin">Bro!!!!!
+                            </div>
+                    </div>
+                </div>
+                <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT44dk63s5vjTHHuGKlPBEpkW1W1HdyGi8L5w&usqp=CAU" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Nobita</p>                          
+                            <span>14/10/2022</span>
+                            </div>
+                        <div class="last_message rin">Admin here</div>
+                    </div>
+                </div>
+                <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0SksJ6AClm0hXY0Gz-ATYT3q8XP3jiVFwHQ&usqp=CAU" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Shishimaroo</p>
+                            <span>01/05/2022</span>
+                           </div>
+                        <div class="last_message rin">Hello world</div>
+                    </div>
+                </div>
+                <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="./image/teamneo.jpg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Team Neo
+                                <i class="fa fa-cubes" style="font-size:20px;color:lightpink"></i>
+                                <i class="fa fa-soccer-ball-o" style="font-size:20px;color:rgb(189, 34, 57)"></i>
+                                </p>
+                            <span>yesterday</span>
+                            </div>
+                        <div class="last_message rin">Hi</div>
+                    </div>
+                </div>
+               <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="./image/ravi.jpeg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Ravi</p>
+                            <span>17/10/2022</span>
+                             </div>
+                        <div class="last_message rin">Hi</div>
+                    </div>
+                </div>
+               <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="./image/g1.jpg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Shubham Singh</p>
+                            <span>11/10/2022</span>
+                            </div>
+                        <div class="last_message rin">Hi</div>
+                    </div>
+                </div>
+            <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="./image/g2.jpg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Devina</p>
+                            <span>04/08/2022</span>
+                        </div>
+                        <div class="last_message rin">Lorem, ipsum.</div>
+                    </div>
+                </div>
+              <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="./image/seemant.jpg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Seemant</p>
+                            <span>17/10/2022</span>
+                             </div>
+                        <div class="last_message rin">Hi</div>
+                    </div>
+                </div>
+              <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="./image/student.jpg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Vidhya</p>
+                            <span>17/10/2022</span>
+                             </div>
+                        <div class="last_message rin">Lorem, ipsum dolor.</div>
+                    </div>
+                </div>
+                <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="./image/vishal.jpg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Bishal</p>
+                            <span>17/10/2022</span>
+                             </div>
+                        <div class="last_message rin">Vishal with a "B"</div>
+                    </div>
+                </div>
+                <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="./image/ahad.jpg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Ahad Khan</p>
+                            <span>17/10/2022</span>
+                    </div>
+                        <div class="last_message rin">Lorem, ipsum.</div>
+                    </div>
+                </div>
+              <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="./image/g3.jpg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Preeeti</p>
+                            <span>07/08/2022</span>
+                        </div>
+                        <div class="last_message rin">Hi</div>
+                    </div>
+                </div>
+              <div class="individual_details flexbox rin">
+                    <div class="friend_image">
+                        <img src="./image/g4.jpg" alt="">
+                    </div>
+                    <div class="all_text rin">
+                        <div class="name_lastchat flexbox rin">
+                            <p>Srishti</p>
+                            <span>12/08/2022</span>
+                        </div>
+                        <div class="last_message rin">Hi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big_chat_box">
+            <div class="chat111 rin">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span class="chattext rin">Lorem ipsum dolor sit, ng elit. Culpa, consequatur.</span>
+            </div>
+            <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet co consequatur.</span>
+            </div>
+            <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet con . Culpa, consequatur.</span>
+            </div>
+            <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, a t. Culpa, consequatur.</span>
+            </div>
+            <div class="chat111 rin">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum d . Culpa, consequatur.</span>
+            </div>
+        <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet co  consequatur.</span>
+            </div>
+            <div class="chat111">
+                <img src="./image/mentimage.jpg" alt="">
+            </div>
+            <div class="chat2 rin">
+                <img src="./image/student.jpg" alt="">
+        </div>
+            <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet conse  consequatur.</span>
+            </div>
+            <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet consectetur onsequatur.</span>
+            </div>
+            <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet conse  consequatur.</span>
+            </div>
+            <div class="chat111">
+                <img src="./image/mentimage.jpg" alt="">
+                </div>
+            <div class="chat2 rin">
+                <img src="./image/student.jpg" alt="">
+            </div>
+            <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet conse  consequatur.</span>
+            </div>
+            <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet consectetur onsequatur.</span>
+            </div>
+            <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet conse  consequatur.</span>
+            </div>
+            <div class="chat111">
+                <img src="./image/mentimage.jpg" alt="">
+                </div>
+            <div class="chat2 rin">
+                <img src="./image/student.jpg" alt="">
+                 </div>
+           <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet conse  consequatur.</span>
+            </div>
+          <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet consectetur onsequatur.</span>
+            </div>
+            <div class="chat111">
+                <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+            <div class="chat2 rin">
+                 <span>Lorem ipsum dolor sit, amet conse  consequatur.</span>
+            </div>
+            <div class="bottom flexbo rin">
+                <div class="bottom_chat_box flexbox rin">
+                    <i class="fa fa-smile-o rin" style="font-size: 27px"></i>
+                    <i class="fa fa-paperclip" style="font-size: 27px"></i>
+                    <input type="search" placeholder="Type a message" />
+                    <i class="fa fa-microphone" style="font-size: 27px"></i>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
