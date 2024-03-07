@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive WebPage Layout</title>
+   <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
+:root {
+  --light_pink: rgb(255, 113, 135);
+  --very_light_grey: rgb(220, 220, 220);
+  --light_grey: rgb(100, 100, 100);
+  --blue_colour: blue;
+  --justify_space_between: space-between;
+  --justify_space_evenly: space-evenly;
+  --background_black: black;
+}
+
+/* GENERAL CSS FOR ALL START HERE */
+
+.ring {
+  border: 1px solid red;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.justifyse {
+  justify-content: space-evenly;
+}
+.justifysb {
+  justify-content: space-between;
+}
+
+/* GENERAL CSS FOR ALL END HERE */
+/* =====TOP MOST SOCIAL MEDIA LINKS PORTION STARTS HERE========== */
+
+.wrapper {
+  border-bottom: 1px solid grey;
+}
+
+.top_most_strip {
+  justify-content: var(--justify_space_between);
+  /* justify-content: space-between; */
+  /* border-bottom: 1px solid rgb(54, 91, 161); */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.top_most_strip h5 {
+  color: rgb(150, 150, 150);
+}
+
+.social_media_icon {
+  margin-left: 1%;
+}
+
+.social_media_icon .fa {
+  margin: 5px 8px;
+  padding: 4px;
+  /* border: 1px solid red; */
+  background-color: rgb(230, 230, 230);
+  border-radius: 3px;
+}
+
+.select_option select {
+  /* margin: 0px 15px; */
+  font-size: 0.7em;
+  border: none;
+  color: rgb(150, 150, 150);
+}
+
+
+
+.second_bar {
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0px auto;
+  padding: 1%;
+  /* border: 1px solid red; */
+}
+
+.second_bar p {
+  /* margin-left: 1%; */
+  color: var(--light_pink);
+}
+
+.search_box {
+  justify-content: space-between;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 5px;
+  width: 55%;
+}
+
+.search_box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+}
+
+.search_box .fa {
+  margin-right: 2%;
+  /* border: 1px solid red; */
+  margin: 0px 10px;
+}
+
+/* .shopping_icon {
+  margin-right: 2%;
+} */
+
+.shopping_icon .fa {
+  margin: 0px 10px;
+}
+/* ===========SEARCH BAR PART ENDS HERE============= */
+/* =============NAV BAR PART STARTS HERE==================== */
+.nav_bar {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+.nav_bar ul li {
+  display: inline-block;
+  /* border: 1px solid red; */
+  margin: 15px 20px;
+}
+
+.nav_bar ul li a {
+  text-decoration: none;
+  color: black;
+}
+/* =============NAV BAR PART STARTS HERE==================== */
+/* ==================MAIN BODY STARTS FROM HERE================== */
+
+/* ==========BANNER PORTION STARTS HERE=============== */
+.main_width {
+  max-width: 1400px;
+
+  margin: 0px auto;
+  /* height: 100%; */
+  /* border: 2px solid green; */
+}
+
+.banner {
+  /* max-height: fit-content; */
+  /* height: 100%; */
+  /* max-height: 100%; */
+  /* width: 100%; */
+
+  background-image: url(data:image/jpeg;base64,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);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0.3% 0%;
+  border: 1px solid white;
+  margin-bottom: 2%;
+  /* height: 100%; */
+}
+
+.banner_text {
+  /* border: 1px solid red; */
+  width: 60%;
+  /* padding-let: 9%; */
+  padding: 4% 8%;
+  /* height: 100%; */
+  /* margin-left: 9%; */
+  /* margin-top: 5%; */
+  /* margin-bottom: 7%; */
+}
+.starting {
+  font-size: 2rem;
+}
+
+.banner_text p {
+  font-size: 2.5rem;
+  color: var(--light_pink);
+}
+
+.banner_text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  /* text-shadow: 0px 0px 5px black; */
+}
+
+.banner_text strong {
+  font-size: 4rem;
+}
+
+.banner_text button {
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: var(--light_pink);
+  color: white;
+  padding: 2% 3%;
+  margin: 2% 0%;
+  cursor: pointer;
+}
+
+/* ==========BANNER PORTION ENDS HERE=============== */
+/* FIRST FOUR BLOCK OF ITEMS STARTS HERE= */
+
+.main_widtha {
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+/* .overflowx {
+  overflow-x:scroll;
+} */
+
+.one_small_block {
+  /* flex: 1; */
+  width: 290px;
+  justify-content: start;
+  align-items: stretch;
+  border-radius: 3px;
+  border: 1px solid var(--very_light_grey);
+  margin: 1% 1.4%;
+}
+
+.one_small_block:hover{
+  box-shadow: 0px 0px 4px lightgreen;
+}
+
+.svg_icon img {
+  width: 60px;
+  height: 60px;
+  margin: 8px;
+  padding: 7px;
+  border-radius: 3px;
+  background-color: rgb(210, 210, 210);
+  /* margin: auto 5px; */
+}
+
+.top_text {
+  margin: 8px;
+  padding: 7px;
+  justify-content: space-around;
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 65%;
+}
+
+.top_text a {
+  text-decoration: none;
+  color: rgb(255, 113, 135);
+  font-size: 0.9em;
+}
+
+.seprate {
+  justify-content: space-between;
+  /* width:100%; */
+  /* border: 1px solid blue; */
+}
+
+.seprate p {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* FIRST FOUR BLOCK OF ITEMS ENDS HERE= */
+/* =================ASIDE BLOCK STARTS HERE===========================  */
+
+aside {
+  margin-left: 1%;
+  width: 32.5%;
+  /* height: max-content; */
+
+  /* height: 100%; */
+  /* margin: 0.1% 1%;  */
+  /* border: 10px solid blue; */
+}
+
+.asider {
+  width: 32%;
+  /* padding-right: 2%; */
+  position: sticky;
+  top: 0px;
+  /* border: 2px dotted black; */
+  height: min-content;
+}
+
+.main_wrapper {
+  display: flex;
+  margin: 0 auto;
+  /* position: relative; */
+  /* top: 0px; */
+  justify-content: space-evenly;
+  /* align-items: flex-start; */
+  /* border: 1px solid blue; */
+  /* border: 5px dotted black; */
+}
+
+.left_aside_svg {
+  /* border: 1px solid red; */
+  justify-content: start;
+  margin: 5% 0%;
+  /* margin-left: 0%; */
+}
+
+.left_aside_svg img {
+  width: 35px;
+  height: 35px;
+  margin-left: 6%;
+}
+
+.text_plus {
+  justify-content: var(--justify_space_between);
+  width: 80%;
+  margin-left: 4%;
+  /* border: 1px solid blue; */
+}
+.long_container {
+  width: 90%;
+  /* margin: 0.1% 1%; */
+  border-radius: 3px;
+  margin-left: 6%;
+  /* border: 1px solid grey; */
+}
+
+.one_block {
+  width: 100%;
+  justify-content: start;
+  border-radius: 3px;
+  border: 1px solid var(--very_light_grey);
+  margin: 6% 0%;
+  
+  /* border: 1px solid blue; */
+}
+
+.one_block:hover{
+  box-shadow: 0px 0px 4px greenyellow;
+}
+
+.long_box_heading {
+  width: 100%;
+  font-weight: bold;
+}
+
+.product_image {
+  margin: 0px 5px;
+}
+
+.product_image img {
+  width: 70px;
+  height: 70px;
+  padding: 1px;
+  /* border: 1px solid red; */
+}
+
+ 
+
+.alltext .top {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.alltext .grey {
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+
+.alltext .amount {
+  color: var(--light_pink);
+  font-weight: bold;
+  font-size: 0.8em;
+}
+/* =================ASIDE BLOCK ENDS HERE===========================  */
+/* ================MAIN BODY CENTER STARTS FROM HERE================ */
+.long_container_main {
+  /* justify-content: flex-start; */
+  width: 29%;
+  /* margin-left: 2%; */
+  /* margin: 0.1% 1%; */
+  /* margin-left: 10px; */
+  /* flex-wrap: wrap; */
+  border-radius: 3px;
+  /* border: 5px solid blue; */
+}
+
+/* .long_container_main p {
+  padding-left: 10px;
+} */
+
+.one_block_main {
+  width: 100%;
+  justify-content: start;
+  border-radius: 3px;
+  border: 1px solid var(--very_light_grey);
+  margin: 5% 0%;
+}
+
+.one_block_main:hover{
+  box-shadow: 0px 0px 4px greenyellow;
+}
+
+.main_center {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 1%;
+  /* width: auto; */
+  width: 100%;
+  /* border: 1px solid blue; */
+}
+/* <!-- ============ONE BIG PICTURE======================== --> */
+.mid_box_bpic {
+  border: 1px solid var(--very_light_grey);
+  border-radius: 5px;
+  justify-content: flex-start;
+  margin-bottom: 5%;
+  /* width: 100%; */
+}
+.shampoo {
+  width: 100%;
+  padding: 2%;
+}
+.sectionbigpic {
+  /* width: 10%; */
+  margin: 2.2%;
+  padding-top: 3%;
+  /* margin: 1px auto; */
+}
+.shampoo img {
+  width: 100%;
+  object-fit: contain;
+  /* width: 18%; */
+  /* border: 1px solid blue; */
+  /* width: 40%; */
+  /* height: 50%; */
+}
+
+.progress_bar {
+  margin: 2% 0%;
+  width: 100%;
+  height: 10px;
+  background-color: var(--very_light_grey);
+  padding: 2px 2px;
+  border-radius: 5px;
+}
+
+.pink {
+  height: 6px;
+  width: 55%;
+  background-color: var(--light_pink);
+  border-radius: 5px;
+}
+
+.small_square_div {
+  display: flex;
+}
+
+.small_square {
+  text-align: center;
+  /* padding: 10px; */
+  width: 14%;
+  border-radius: 5px;
+  background-color: var(--very_light_grey);
+  margin-top: 2%;
+  margin-right: 3%;
+}
+
+.targetspan > span {
+  font-size: 1.5em;
+  color: var(--light_grey);
+}
+.all_content {
+  font-size: 1em;
+  padding: 3%;
+  padding-right: 5%;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.all_content h5 {
+  font-size: 1.15em;
+}
+
+.all_content p {
+  color: var(--light_grey);
+}
+
+.all_content button {
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  color: white;
+  background-color: var(--light_pink);
+  padding: 1.5% 5%;
+  margin: 2% 0%;
+}
+
+/* <!-- ============ONE BIG PICTURE======================== --> */
+/* ===============MEDIUM SIZE BLOCK STARTS HERE================ */
+
+.small_block_section {
+  margin: 2%;
+  /* border: 2px solid red; */
+}
+
+.small_block_section h1 {
+  width: 98%;
+  margin-bottom: 4%;
+  margin-left: 1%;
+  border-bottom: 1px solid grey;
+}
+
+.block_wrapper {
+  /* border: 1px solid grey; */
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items {
+  width: 23%;
+  margin: 1%;
+  border-radius: 4px;
+  border: 1px solid var(--very_light_grey);
+}
+
+.items:hover {
+  box-shadow: 0px 0px 5px gray;
+}
+
+.items img {
+  width: 100%;
+}
+.name {
+  color: var(--light_pink);
+}
+.grey {
+  color: var(--light_grey);
+  font-size: 12px;
+}
+
+.text_all {
+  margin: 4%;
+}
+
+/* ===============MEDIUM SIZE BLOCK STARTS HERE================ */
+/* ==================MAIN BODY ENDS FROM HERE================== */
+/* ==========THREE MAIN PHOTOS BOTTOM MOST STARTS FROM HERE=========== */
+
+.threepic {
+  display: flex;
+  /* justify-content: flex-start; */
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin: 3% 0%;
+}
+.mainleft {
+  width: 21.8%;
+  height: 100%;
+  box-shadow: 0px 0px 1px grey;
+  border-radius: 5px;
+}
+.mainleft h1 {
+  /* margin-top: 5%; */
+  border-bottom: 1px solid grey;
+  padding-top: 5%;
+  padding-left: 4%;
+}
+
+.midpic {
+  width: 46.5%;
+  /* width: 100%; */
+  /* height: 100%; */
+  border-radius: 8px;
+  background-image: url(./images/cta-banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* border: 1px solid blue; */
+}
+
+.fa-quote-left {
+  color: var(--light_pink);
+  margin: 8%;
+}
+
+.leftmostpart {
+  padding: 5%;
+  text-align: center;
+}
+
+.leftmostpart img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 4% 0%;
+}
+
+.blocker {
+  justify-content: flex-start;
+  margin: 4% 0%;
+}
+
+.textforpic {
+  margin: 12%;
+  width: 50%;
+  background-color: white;
+  opacity: 0.7;
+  text-align: center;
+  padding: 5%;
+  border-radius: 5px;
+}
+
+.nameuser {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.work {
+  font-size: 1em;
+}
+
+.textforpic h1 {
+  font-size: 2em;
+}
+
+.textforpic .discount {
+  color: white;
+  background-color: var(--background_black);
+  width: 54%;
+  margin: 0 auto;
+  /* width: 50%; */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.textforpic a {
+  text-decoration: none;
+  color: var(--light_grey);
+  font-weight: bold;
+}
+
+.smallwrapper{
+  /* border: 1px solid blue; */
+  margin: 0% 2%;
+  /* text-align: start; */
+  /* margin-top: 2%; */
+}
+
+.toptext {
+  color: var(--light_grey);
+  font-weight: bold;
+  font-size: 18px;
+  /* font-weight: 600; */
+}
+
+.bottomtext {
+  color: var(--light_grey);
+  font-size: 1em;
+  /* text-align: center; */
+}
+
+.rightmostpart {
+  height: 100%;
+  /* width: auto; */
+  padding: 5%;
+  /* border: 1px solid red; */
+}
+
+/* ==========THREE MAIN PHOTOS BOTTOM MOST ENDS FROM HERE=========== */
+/* <!-- =============BOTTOM FOUR PICTURE STARTS FROM HERE================== --> */
+
+.main_container {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2% 0%;
+}
+.one_card {
+  width: 22%;
+  border-radius: 5px;
+}
+.one_card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.textdetails {
+  margin: 2% 0%;
+}
+
+.detailsd {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.bottomtext {
+  font-size: 1rem;
+  margin-bottom: 5%;
+}
+/* <!-- =============BOTTOM FOUR PICTURE ENDS FROM HERE================== --> */
+/* FOOTER PART STARTS HERE */
+
+.branddirectory {
+  padding: 3% 9%;
+  border-bottom: 1px solid grey;
+  background-color: var(--background_black);
+  color: white;
+  width: auto;
+}
+
+.lista {
+  margin: 1.5% 0%;
+}
+.lista li {
+  display: inline;
+  font-size: 0.8em;
+}
+
+.lista a {
+  text-decoration: none;
+  color: var(--light_grey);
+}
+
+/* <!-- VERTICAL LI --> */
+
+.verticalli {
+  background-color: var(--background_black);
+  border-bottom: 1px solid grey;
+  align-items: stretch;
+}
+.mainhead {
+  padding: 3% 2%;
+}
+
+.mainhead p {
+  font-weight: bold;
+  color: white;
+}
+
+/* .mainhead p:hover {
+  text-decoration: underline yellow;
+  text-underline-offset: 5px;
+} */
+
+.mainhead a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--light_grey);
+}
+
+/* <!-- VERTICAL LI --> */
+
+.extlast {
+  font-size: 0.8em;
+  text-align: center;
+  background-color: var(--background_black);
+  padding: 2% 0%;
+  padding-bottom: 40px;
+  color: white;
+}
+
+.connectwithus i {
+  margin-right: 15px;
+}
+
+.navbarbottom {
+  text-align: center;
+  width: 80%;
+  border-radius: 5px 5px 0px 0px;
+  background-color: white;
+  /* margin: 0% auto; */
+}
+
+.navbarbottom i {
+  margin: 1% 6%;
+  /* border: 1px solid red; */
+}
+
+/* FOOTER PART ENDS HERE */
+
+/* ======================MEDIA QUERY====================== */
+
+@media screen and (max-width: 1800px) {
+  .navbarbottom {
+    display: none;
+  }
+
+  .connectwithus {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  aside,
+  .social_media_icon,
+  .shopping_icon {
+    display: none;
+  }
+
+  .long_container_main {
+    /* justify-content: flex-start; */
+    width: 42%;
+  }
+  .second_bar {
+    justify-content: space-around;
+  }
+  .top_most_strip {
+    margin: 0% 5%;
+    /* width: 100vw; */
+    /* justify-content: space-around; */
+  }
+}
+
+/* ======================MEDIA QUERY FOR TABLET====================== */
+@media screen and (max-width: 821px) {
+  .one_card {
+    width: 40%;
+  }
+  .banner {
+    width: 100vw;
+    background-size: contain;
+    margin: 2% 0%;
+  }
+
+  .banner_text {
+    /* border: 1px solid red; */
+    width: 50vw;
+    /* height: 100%; */
+    /* margin-left: 9%; */
+    /* margin-top: 5%; */
+    /* margin-bottom: 7%; */
+  }
+  .starting {
+    font-size: 2em;
+  }
+
+  .banner_text p {
+    font-size: 1.5rem;
+    color: var(--light_pink);
+  }
+
+  .banner_text h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    /* text-shadow: 0px 0px 5px black; */
+  }
+
+  .banner_text strong {
+    font-size: 1.5rem;
+  }
+
+  .nav_bar {
+    display: none;
+  }
+
+  .mainleft {
+    width: 100%;
+    margin: 2%;
+  }
+  .leftmostpart {
+    width: 50%;
+    margin: 0px auto;
+  }
+  .rightmostpart {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .blocker {
+    width: 30%;
+    margin: 1%;
+    /* border: 1px solid red; */
+  }
+  .midpic {
+    width: 100%;
+    height: 100%;
+    margin: 2%;
+    object-fit: contain;
+  }
+
+  .items {
+    width: 45%;
+  }
+  .card2,
+  .card3 {
+    display: none;
+  }
+  .connectwithus {
+    display: block;
+  }
+
+  .navbarbottom {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    width: 80%;
+    left: 10%;
+    /* left: auto; */
+    /* margin: 0px 9%; */
+    z-index: 1;
+    border: 1px solid var(--light_grey);
+    /* margin-left: 0% auto; */
+  }
+}
+
+/* =========================MEDIA QUERY FOR PHONE======================  */
+@media screen and (max-width: 600px) {
+  /* .banner {
+    margin: 10px auto;
+    width: 100%;
+  } */
+
+  .long_container_main {
+    width: auto;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+  }
+
+  .center {
+    margin: 5px auto;
+    /* border: 1px solid red; */
+  }
+
+  .search_box {
+    width: 90%;
+    margin-bottom: 3%;
+  }
+
+  .banner {
+    margin: 2% 0%;
+    /* object-fit: contain; */
+  }
+
+  .banner_text {
+    /* border: 1px solid red; */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* position: relative; */
+    /* right: 35px; */
+    /* padding: 1%; */
+    /* height: 100%; */
+    /* margin-left: 9%; */
+    /* margin-top: 5%; */
+    /* margin-bottom: 7%; */
+  }
+
+  .banner_text p {
+    font-size: 0.8rem;
+    color: var(--light_pink);
+  }
+
+  .banner_text h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* text-shadow: 0px 0px 5px black; */
+  }
+
+  .banner_text strong {
+    font-size: 1.5rem;
+  }
+
+  .banner_text button {
+    border: none;
+    border-radius: 3px;
+    background-color: var(--light_pink);
+    color: white;
+    padding: 1% 1%;
+    margin: 2% 0%;
+    cursor: pointer;
+  }
+  .one_small_block {
+    flex: 1;
+    margin: 1% 5%;
+    /* border: 1px solid red; */
+  }
+
+  .mid_box_bpic {
+    width: 100%;
+    margin-bottom: 10%;
+    display: block;
+    /* border: 1px solid red; */
+  }
+
+  .mainleft {
+    margin: 4%;
+  }
+
+  .select_option {
+    display: none;
+  }
+  .rightmostpart {
+    display: block;
+  }
+  .blocker {
+    /* width: 92%; */
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid red; */
+  }
+
+  .midpic {
+    width: 100%;
+    height: 100%;
+    margin: 4%;
+    object-fit: contain;
+    /* border: 1px solid red; */
+  }
+
+  .leftmostpart {
+    width: 80%;
+
+    /* border:1px solid red; */
+    margin: 0px auto;
+  }
+
+  .one_card {
+    margin: 4%;
+    width: 95%;
+  }
+  .card1,
+  .card2,
+  .card3 {
+    display: none;
+  }
+  .mainhead {
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: 2% 0%;
+    /* display: block; */
+    /* position: relative; */
+    /* right: 2%; */
+  }
+
+  .navbarbottom {
+    width: 100%;
+    left: 0%;
+  }
+}
+
+   </style>
+    <!-- ================GOOGLE FONTS AND FONT AWESOME LINKS==================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" 
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ================GOOGLE FONTS AND FONT AWESOME LINKS==================== -->
+  </head>
+  <body>
+    <div class="wrapper rin flexbo">
+      <!-- =========TOP MOST STRIP PART STARTS HERE=================== -->
+      <div class="top_most_strip flexbox rin">
+        <div class="social_media_icon rin">
+          <i
+            class="fa fa-facebook-square"
+            style="font-size: 1.2em; color: rgb(150, 150, 150)"
+          ></i>
+          <i
+            class="fa fa-twitter"
+            style="font-size: 1.2em; color: rgb(150, 150, 150)"
+          ></i>
+          <i
+            class="fa fa-instagram"
+            style="font-size: 1.2em; color: rgb(150, 150, 150)"
+          ></i>
+          <i
+            class="fa fa-linkedin-square"
+            style="font-size: 1.2em; color: rgb(150, 150, 150)"
+          ></i>
+        </div>
+        <p style="color: grey; font-size: 0.8em; " class="center">
+          FREE SHIPPING THIS WEEK ORDER OVER - $55
+        </p>
+        <div class="select_option rin">
+          <select name="USD" id="usd_selector">
+            <option value="">USD $</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+          </select>
+          <select name="english" id="language">
+            <option value="">ENGLISH</option>
+            <option value="">HINDI</option>
+            <option value="">SANSKRIT</option>
+            <option value="">URDU</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- =========TOP MOST STRIP PART ENDS HERE=================== -->
+    <!-- =========SEARCH BAR PART STARTS HERE=================== -->
+    <header>
+      <div class="wrapper">
+        <div class="second_bar flexbox wrap rin">
+          <p style="font-size: 2.5em">E-Commerce</p>
+          <div class="search_box rin flexbox">
+            <input type="search" placeholder="Enter your product name..." />
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+          <div class="shopping_icon">
+            <i
+              class="fa fa-user"
+              aria-hidden="true"
+              style="font-size: 1.5em; color: rgb(150, 150, 150)"
+            ></i> 
+            <i
+              class="fa fa-heart"
+              style="font-size: 1.5em; color: rgb(150, 150, 150)"
+            ></i> 
+            <i
+              class="fa fa-shopping-bag"
+              aria-hidden="true"
+              style="font-size: 1.5em; color: rgb(150, 150, 150)"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <!-- =========SEARCH BAR PART ENDS HERE=================== -->
+      <!-- =============NAV BAR PART STARTS HERE==================== -->
+      <nav class="nav_bar flexbox rin">
+        <ul class="ulwidth rin">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">CATEGORIES</a></li>
+          <li><a href="#">MEN'S</a></li>
+          <li><a href="#">WOMEN'S</a></li>
+          <li><a href="#">JEWELRY</a></li>
+          <li><a href="#">PERFUME</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">HOT OFFERS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- =============NAV BAR PART ENDS HERE==================== -->
+    <!-- ================== BANNER TEXT STARTS FROM HERE================== -->
+    <div class="main_width rin">
+      <div class="banner rin">
+        <div class="banner_text rin">
+          <p>Trending Item</p>
+          <h1>WOMEN'S LATEST FASHION SALE</h1>
+          <p style="color: rgb(100, 100, 100); " class="starting">
+            starting at $ <strong>20.</strong>00
+          </p>
+          <button>SHOP NOW</button>
+        </div>
+      </div>
+      <!-- =================FIRST FOUR BLOCK OF ITEMS STARTS HERE========================= -->
+      <section class="main_widtha flexbox rin wrap justifys  overflowx">
+        
+        <!-- ==========ONE CONTAINER FOR SMALL BLOCK================= -->
+        <div class="one_small_block rin flexbox">
+          <div class="svg_icon flexbox">
+            <img src="./images/icons/dress.svg" alt="" />
+          </div>
+          <div class="top_text flexbo rin">
+            <div class="seprate flexbox rin"> 
+                <p>DRESS & FROCK</p> <p style="color: rgb(150,150,150); font-size:10px;">(53)</p>
+            </div>
+            <a href="#">Show All</a>
+          </div>
+        </div>
+        <!-- ==========ONE CONTAINER FOR SMALL BLOCK================= -->
+        <!-- ==========TWO CONTAINER FOR SMALL BLOCK================= -->
+        <div class="one_small_block rin flexbox">
+            <div class="svg_icon flexbox">
+              <img src="./images/icons/coat.svg" alt="" />
+            </div>
+            <div class="top_text flexbo rin">
+              <div class="seprate flexbox rin"> 
+                  <p>WINTER WEAR</p> <p style="color: rgb(150,150,150); font-size:10px;">(58)</p>
+              </div>
+              <a href="#">Show All</a>
+            </div>
+          </div>
+          <!-- ==========TWO CONTAINER FOR SMALL BLOCK================= -->
+          <!-- ==========THREE CONTAINER FOR SMALL BLOCK================= -->
+        <div class="one_small_block rin flexbox">
+            <div class="svg_icon flexbox">
+              <img src="./images/icons/glasses.svg" alt="" />
+            </div>
+            <div class="top_text flexbo rin">
+              <div class="seprate flexbox rin"> 
+                  <p>GLASSES & LENS</p> <p style="color: rgb(150,150,150); font-size:10px;">(68)</p>
+              </div>
+              <a href="#">Show All</a>
+            </div>
+          </div>
+          <!-- ==========THREE CONTAINER FOR SMALL BLOCK================= -->
+          <!-- ==========FOUR CONTAINER FOR SMALL BLOCK================= -->
+        <div class="one_small_block rin flexbox">
+            <div class="svg_icon flexbox">
+              <img src="./images/icons/shorts.svg" alt="" />
+            </div>
+            <div class="top_text flexbo rin">
+              <div class="seprate flexbox rin"> 
+                  <p>SHORTS & JEANS</p> <p style="color: rgb(150,150,150); font-size:10px;">(84)</p>
+              </div>
+              <a href="#">Show All</a>
+            </div>
+          </div>
+          <!-- ==========FOUR CONTAINER FOR SMALL BLOCK================= -->
+      </section>
+      <!-- ============FOUR SMALL BLOCK BELOW BANNER ENDS HERE=============== -->
+      <!-- ==================ASIDE BLOCK STARTS HERE=========================== -->
+      <div class="main_wrapper rin">
+        <aside class="asider rin ">
+            <div class="long_container rin">
+                <p style="font-size: 1.5em; margin-left: 7%; margin: 14% 0% ;" >CATEGORY</p>
+                <!-- ONE BLOCK STARTS-->
+                <div class="left_aside_svg rin flexbox">
+                    <img src="./images/icons/dress.svg" alt="">
+                    <div class="text_plus rin flexbox">
+                        <p>Clothes</p>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <!-- ONE BLOCK STARTS-->
+                  <!-- ONE BLOCK STARTS-->
+                  <div class="left_aside_svg rin flexbox">
+                    <img src="./images/icons/shoes.svg" alt="">
+                    <div class="text_plus rin flexbox">
+                        <p>Footwear</p>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <!-- ONE BLOCK STARTS-->
+                  <!-- ONE BLOCK STARTS-->
+                  <div class="left_aside_svg rin flexbox">
+                    <img src="./images/icons/jewelry.svg" alt="">
+                    <div class="text_plus rin flexbox">
+                        <p>Clothes</p>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <!-- ONE BLOCK STARTS-->
+                  <!-- ONE BLOCK STARTS-->
+                  <div class="left_aside_svg rin flexbox">
+                    <img src="./images/icons/perfume.svg" alt="">
+                    <div class="text_plus rin flexbox">
+                        <p>Clothes</p>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <!-- ONE BLOCK STARTS-->
+                  <!-- ONE BLOCK STARTS-->
+                  <div class="left_aside_svg rin flexbox">
+                    <img src="./images/icons/cosmetics.svg" alt="">
+                    <div class="text_plus rin flexbox">
+                        <p>Clothes</p>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <!-- ONE BLOCK STARTS-->
+                  <!-- ONE BLOCK STARTS-->
+                  <div class="left_aside_svg rin flexbox">
+                    <img src="./images/icons/glasses.svg" alt="">
+                    <div class="text_plus rin flexbox">
+                        <p>Clothes</p>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <!-- ONE BLOCK STARTS-->
+                  <!-- ONE BLOCK STARTS-->
+                  <div class="left_aside_svg rin flexbox">
+                    <img src="./images/icons/bag.svg" alt="">
+                    <div class="text_plus rin flexbox">
+                        <p>Clothes</p>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <!-- ONE BLOCK STARTS-->
+            </div>
+    
+            <!-- =======LONG CONTAINER OF LEFT SIDE STARTS  -->
+                <div class="long_container rin">
+                    <p class="rin" style="font-size: 1.5em; margin-top: 50px;">BEST SELLER</p>
+                    <!-- ONE PRODUCT DETAILS -->
+                    <div class="one_block flexbox">
+                        <div class="product_image rin">
+                            <img src="./images/products/clothes-1.jpg" alt="clothes-1">
+                        </div>
+                        <div class="alltext">
+                            <p class="top">Baby Fabric Shoes</p>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                            <div><span class="amount" style="text-decoration-line: line-through; color:rgb(150, 150, 150); ">$5.00</span><span style=" font-weight: bold; color:rgb(80, 80, 80); margin-left: 3%;"> $4.00</span></div>
+                             
+                        </div>
+                    </div>
+                    <!-- ONE PRODUCT DETAILS -->
+                     <!-- ONE PRODUCT DETAILS -->
+                     <div class="one_block flexbox">
+                        <div class="product_image rin">
+                            <img src="./images/products/2.jpg" alt="clothes-1">
+                        </div>
+                        <div class="alltext">
+                            <p class="top">Men's Hoodies T-Shirt</p>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                            <div><span class="amount" style="text-decoration-line: line-through; color:rgb(150, 150, 150); ">$5.00</span><span style=" font-weight: bold; color:rgb(80, 80, 80); margin-left: 3%;"> $4.00</span></div>
+                             
+                        </div>
+                    </div>
+                    <!-- ONE PRODUCT DETAILS -->
+                      <!-- ONE PRODUCT DETAILS -->
+                      <div class="one_block flexbox">
+                        <div class="product_image rin">
+                            <img src="./images/products/3.jpg" alt="clothes-1">
+                        </div>
+                        <div class="alltext">
+                            <p class="top">Men's Hoodies T-Shirt</p>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                            <div><span class="amount" style="text-decoration-line: line-through; color:rgb(150, 150, 150); ">$5.00</span><span style=" font-weight: bold; color:rgb(80, 80, 80); margin-left: 3%;"> $4.00</span></div>
+                             
+                        </div>
+                    </div>
+                    <!-- ONE PRODUCT DETAILS -->
+                      <!-- ONE PRODUCT DETAILS -->
+                    <div class="one_block flexbox">
+                        <div class="product_image rin">
+                            <img src="./images/products/4.jpg" alt="clothes-1">
+                        </div>
+                        <div class="alltext">
+                            <p class="top">Woolen Hat For Men</p>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                            <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                            <div><span class="amount" style="text-decoration-line: line-through; color:rgb(150, 150, 150); ">$5.00</span><span style=" font-weight: bold; color:rgb(80, 80, 80); margin-left: 3%;"> $4.00</span></div>
+                             
+                        </div>
+                    </div>
+                    <!-- ONE PRODUCT DETAILS -->
+                </div>
+            </aside>
+          <!-- ==================ASIDE BLOCK ENDS HERE===========================  -->
+              <!-- ==================MAIN PORTION CENTER STARTS FROM HERE==================== -->
+              <main class="main_center flexbox  rin">  
+               <!-- ======= 1st LONG CONTAINER OF CENTER SIDE STARTS  -->
+            <div class="long_container_main rin">
+               <p class="rin" style="font-size: 1.5em; margin: 10% 0%; border-bottom:1px solid grey ;">New Arrivals</p>
+               <!-- ONE PRODUCT DETAILS -->
+               <div class="one_block_main flexbox">
+                   <div class="product_image rin">
+                       <img src="./images/products/clothes-1.jpg" alt="clothes-1">
+                   </div>
+                   <div class="alltext">
+                       <p class="top">Relaxed Short Full Sleep....</p>
+                       <p class="grey" >Clothes</p>
+                       <p class="amount" >$45.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150); margin-left: 3%;"> $12.00</span></p>
+                   </div>
+               </div>
+               <!-- ONE PRODUCT DETAILS -->
+                <!-- ONE PRODUCT DETAILS -->
+                <div class="one_block_main flexbox">
+                   <div class="product_image rin">
+                       <img src="./images/products/clothes-2.jpg" alt="clothes-1">
+                   </div>
+                   <div class="alltext">
+                       <p class="top">Girls Pnk Embro Desig...</p>
+                       <p class="grey" >Clothes</p>
+                       <p class="amount" >$45.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150) ;margin-left: 3%;"> $12.00</span></p>
+                   </div>
+               </div>
+               <!-- ONE PRODUCT DETAILS -->
+                <!-- ONE PRODUCT DETAILS -->
+                <div class="one_block_main flexbox">
+                   <div class="product_image rin">
+                       <img src="./images/products/clothes-3.jpg" alt="clothes-1">
+                   </div>
+                   <div class="alltext">
+                       <p class="top">Black Floral Wrap Midi..</p>
+                       <p class="grey" >Clothes</p>
+                       <p class="amount" >$76.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150) ;margin-left: 3%;"> $12.00</span></p>
+                   </div>
+               </div>
+               <!-- ONE PRODUCT DETAILS -->
+                <!-- ONE PRODUCT DETAILS -->
+                <div class="one_block_main rin flexbox">
+                   <div class="product_image rin">
+                       <img src="./images/products/shirt-1.jpg" alt="clothes-1">
+                   </div>
+                   <div class="alltext">
+                       <p class="top">Pure Garment Dyed C..</p>
+                       <p class="grey" >Mens Fashion</p>
+                       <p class="amount" >$68.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150) ;margin-left: 3%;"> $12.00</span></p>
+                   </div>
+               </div>
+               <!-- ONE PRODUCT DETAILS -->
+           </div>
+           <!-- ======= 1st LONG CONTAINER OF CENTER SIDE STARTS  -->
+           <!-- ======= 2st LONG CONTAINER OF CENTER SIDE STARTS  -->
+           <div class="long_container_main rin">
+            <p class="rin" style="font-size: 1.5em; margin: 10% 0%; border-bottom:1px solid grey ;">Trending</p>
+            <!-- ONE PRODUCT DETAILS -->
+            <div class="one_block_main flexbox">
+                <div class="product_image rin">
+                    <img src="./images/products/sports-1.jpg" alt="clothes-1">
+                </div>
+                <div class="alltext">
+                    <p class="top">Running & Trekking Sh...</p>
+                    <p class="grey" >Sports</p>
+                    <p class="amount" >$49.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150); margin-left: 3%;"> $12.00</span></p>
+                </div>
+            </div>
+            <!-- ONE PRODUCT DETAILS -->
+             <!-- ONE PRODUCT DETAILS -->
+             <div class="one_block_main flexbox">
+                <div class="product_image rin">
+                    <img src="./images/products/sports-2.jpg" alt="clothes-1">
+                </div>
+                <div class="alltext">
+                    <p class="top">Trekking & Running Sh...</p>
+                    <p class="grey" >Sports</p>
+                    <p class="amount" >$45.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150) ;margin-left: 3%;"> $12.00</span></p>
+                </div>
+            </div>
+            <!-- ONE PRODUCT DETAILS -->
+             <!-- ONE PRODUCT DETAILS -->
+             <div class="one_block_main flexbox">
+                <div class="product_image rin">
+                    <img src="./images/products/party-wear-1.jpg" alt="clothes-1">
+                </div>
+                <div class="alltext">
+                    <p class="top">Womens Party Wear S...</p>
+                    <p class="grey" >Party Wear</p>
+                    <p class="amount" >$45.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150) ;margin-left: 3%;"> $12.00</span></p>
+                </div>
+            </div>
+            <!-- ONE PRODUCT DETAILS -->
+             <!-- ONE PRODUCT DETAILS -->
+             <div class="one_block_main rin flexbox">
+                <div class="product_image rin">
+                    <img src="./images/products/sports-3.jpg" alt="clothes-1">
+                </div>
+                <div class="alltext">
+                    <p class="top">Sport Claw Women's...</p>
+                    <p class="grey" >Sports</p>
+                    <p class="amount" >$54.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150) ;margin-left: 3%;"> $12.00</span></p>
+                </div>
+            </div>
+            <!-- ONE PRODUCT DETAILS -->
+        </div>
+        <!-- ======= 2st LONG CONTAINER OF CENTER SIDE STARTS  -->
+        <!-- ======= 3st LONG CONTAINER OF CENTER SIDE STARTS  -->
+        <div class="long_container_main rin">
+            <p class="rin" style="font-size: 1.5em; margin: 10% 0%; border-bottom:1px solid grey ;">Top Rated</p>
+            <!-- ONE PRODUCT DETAILS -->
+            <div class="one_block_main flexbox">
+                <div class="product_image rin">
+                    <img src="./images/products/watch-3.jpg" alt="clothes-1">
+                </div>
+                <div class="alltext">
+                    <p class="top">Pocket Watch Leather...</p>
+                    <p class="grey" >Watches</p>
+                    <p class="amount" >$50.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150); margin-left: 3%;"> $12.00</span></p>
+                </div>
+            </div>
+            <!-- ONE PRODUCT DETAILS -->
+             <!-- ONE PRODUCT DETAILS -->
+             <div class="one_block_main flexbox">
+                <div class="product_image rin">
+                    <img src="./images/products/jewellery-3.jpg" alt="clothes-1">
+                </div>
+                <div class="alltext">
+                    <p class="top">Silver Deer Heart Neck..</p>
+                    <p class="grey" >Jewellery</p>
+                    <p class="amount" >$84.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150) ;margin-left: 3%;"> $12.00</span></p>
+                </div>
+            </div>
+            <!-- ONE PRODUCT DETAILS -->
+             <!-- ONE PRODUCT DETAILS -->
+             <div class="one_block_main flexbox">
+                <div class="product_image rin">
+                    <img src="./images/products/perfume.jpg" alt="clothes-1">
+                </div>
+                <div class="alltext">
+                    <p class="top">Titan 100 MI Womens..</p>
+                    <p class="grey" >Perfume</p>
+                    <p class="amount" >$42.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150) ;margin-left: 3%;"> $12.00</span></p>
+                </div>
+            </div>
+            <!-- ONE PRODUCT DETAILS -->
+             <!-- ONE PRODUCT DETAILS -->
+             <div class="one_block_main rin flexbox">
+                <div class="product_image rin">
+                    <img src="./images/products/belt.jpg" alt="clothes-1">
+                </div>
+                <div class="alltext">
+                    <p class="top">Men's Leather Reversi..</p>
+                    <p class="grey" >Belt</p>
+                    <p class="amount" >$24.00 <span style="text-decoration-line: line-through; color:rgb(150, 150, 150) ;margin-left: 3%;"> $12.00</span></p>
+                </div>
+            </div>
+            <!-- ONE PRODUCT DETAILS -->
+        </div>
+        <!-- ======= 3st LONG CONTAINER OF CENTER SIDE STARTS  -->
+        <!-- ============ONE BIG PICTURE======================== -->
+        <section class="sectionbigpic rin flex">
+                <h1 style="margin-bottom: 2%; border-bottom:1px solid grey; ">Deal of the Day</h1>
+                <div class="mid_box_bpic flexbox ">
+                    <div class="shampoo rin">
+                        <img src="./images/products/shampoo.jpg" alt="">
+                    </div>
+                    <div class="all_content">
+                        <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                        <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                        <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                        <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                        <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                        <h5>SHAMPOO, CONDITIONER & FACEWASH PACKS</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, doloribus Lorem ipsum dolo amet.</p>
+                        <strong style="color: rgb(255, 113, 135); font-size: 2em;">$150.00</strong> <span style="color: rgb(180,180,180); font-size: 2em; text-decoration-line: line-through; margin-left: 5%;">$200.00</span> <br>
+                        <button>ADD TO CART</button>
+                        <div class="flexbox justifysb " id="targetspan">
+                            <span>ALREADY SOLD :<strong>20</strong></span> 
+                            <span>AVAILABLE :<strong>40</strong>  </span> 
+                        </div>
+                        <div class="progress_bar">
+                            <div class="pink"></div>
+                        </div>
+                        <p>HURRY UP! OFFER ENDS IN:</p>
+                        <div class="small_square_div flexbo rin">
+                            <div class="small_square"><strong>360</strong><br>Days</div>
+                            <div class="small_square"><strong>24</strong><br>Hours</div>
+                            <div class="small_square"><strong>59</strong><br>Min</div>
+                            <div class="small_square"><strong>00</strong><br>Sec</div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- ============ONE BIG PICTURE========================  -->
+        <!-- ===========MEDIUM SIZE BLOCK PICTURES STARTS HERE=================== -->
+        <section class="small_block_section rin">
+            <h1>New Products</h1>
+            <div class="block_wrapper flexbox">
+                <!-- BLOCK ONE STARTS HERE -->
+                <div class="items shadow ring">
+                    <img src="./images/products/jacket-3.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                 <!-- BLOCK ONE STARTS HERE -->
+                 <div class="items rin">
+                    <img src="./images/products/shirt-1.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                 <!-- BLOCK ONE STARTS HERE -->
+                 <div class="items rin">
+                    <img src="./images/products/jacket-5.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                 <!-- BLOCK ONE STARTS HERE -->
+                 <div class="items rin">
+                    <img src="./images/products/clothes-3.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                 <!-- BLOCK ONE STARTS HERE -->
+                 <div class="items rin">
+                    <img src="./images/products/shoe-2.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                 <!-- BLOCK ONE STARTS HERE -->
+                 <div class="items rin">
+                    <img src="./images/products/watch-3.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                  <!-- BLOCK ONE STARTS HERE -->
+                  <div class="items rin">
+                    <img src="./images/products/watch-1.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                  <!-- BLOCK ONE STARTS HERE -->
+                  <div class="items rin">
+                    <img src="./images/products/party-wear-1.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                  <!-- BLOCK ONE STARTS HERE -->
+                  <div class="items rin">
+                    <img src="./images/products/jacket-1.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                  <!-- BLOCK ONE STARTS HERE -->
+                  <div class="items shoes rin">
+                    <img class="lolo" src="./images/products/sports-2.jpg" alt="">
+                     
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                  <!-- BLOCK ONE STARTS HERE -->
+                  <div class="items rin">
+                    <img src="./images/products/shoe-1.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+                  <!-- BLOCK ONE STARTS HERE -->
+                  <div class="items rin">
+                    <img src="./images/products/shorts-1.jpg" alt="">
+                    <div class="text_all rin"> 
+                    <p class="name">JACKETS</p>
+                    <p class="grey">Mens Winter Leathers Jackets</p>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star" aria-hidden="true" style="font-size:15px; color:orange;"></i>
+                    <i class="fa fa-star-o" style="font-size:15px;color:orange"></i>
+                    <p><strong>$48.00</strong><span style="color:grey; text-decoration-line:line-through; font-size: 15px; margin-left: 18px;">$75.00</span></p>
+                </div>
+                </div>
+                <!-- BLOCK ONE ENDS HERE -->
+            </div>
+        </section>
+    </main>
+</div>
+        <!-- ===========MEDIUM SIZE BLOCK PICTURES ENDS HERE=================== -->
+        <!-- ===========THREE MAIN PHOTOS BOTTOM MOST STARTS FROM HERE================== -->
+        <section class="threepic wrap flexbox rin">
+            <div class="mainleft rin">
+                <h1>Testimonial</h1>
+                <div class="leftmostpart">
+                    <img src="./images/testimonial-1.jpg" alt="">
+                    <p class="nameuser">ALAN DOE</p>
+                    <p class="work">CEO & Founder Invision</p>
+                    <i class="fa fa-quote-left" aria-hidden="true" style="font-size:40px;"></i>
+                    <p>Lorem ipsum dolor sit  uptate hic sunt mollitia soluta Lorem ipsum dolor sit amet. rem quos tenetur ducimus.</p>
+                </div>
+            </div>
+
+            <div class="midpic flexbox">
+                 <div class="textforpic">
+                    <p class="discount">20% DISCOUNT</p>
+                    <h1>Summer Collection</h1>
+                    <p class="big">STARTING @ $10</p>
+                    <a href="#">SHOP NOW</a>
+                 </div>
+            </div>
+
+            <div class="mainleft rin">
+                <h1>Our Services</h1>
+                <div class="  rightmostpart wra">
+
+                    <div class="blocker flexbox rin"> 
+                        <i class="fa fa-ship rin" aria-hidden="true" style="font-size:2.2em; color:lightpink; margin: 0% 5%;"></i>
+                        <div class="smallwrapper">
+                            <p class="toptext rin">Worldwide Delivery</p>
+                            <p class="bottomtext rin">For Order Over $100</p>
+                        </div>
+                    </div>
+
+                    <div class="blocker flexbox rin"> 
+                        <i class="fa fa-ship rin" aria-hidden="true" style="font-size:2.2em; color:lightpink; margin: 0% 5%;"></i>
+                        <div class="smallwrapper">
+                            <p class="toptext rin">Next Day Delivery</p>
+                            <p class="bottomtext rin">UK Orders Only</p>
+                        </div>
+                    </div>
+
+                    <div class="blocker flexbox rin"> 
+                      <i class="fa fa-ship rin" aria-hidden="true" style="font-size:2.2em; color:lightpink; margin: 0% 5%;"></i>
+                      <div class="smallwrapper">
+                          <p class="toptext rin">Best Online Support</p>
+                          <p class="bottomtext rin">Hours:8AM - 11PM</p>
+                      </div>
+                  </div>
+
+                  <div class="blocker flexbox rin"> 
+                    <i class="fa fa-ship rin" aria-hidden="true" style="font-size:2.2em; color:lightpink; margin: 0% 5%;"></i>
+                    <div class="smallwrapper">
+                        <p class="toptext rin">Return Policy</p>
+                        <p class="bottomtext rin">Easy & Free Return</p>
+                    </div>
+                </div>
+
+                <div class="blocker flexbox rin"> 
+                  <i class="fa fa-ship rin" aria-hidden="true" style="font-size:2.2em; color:lightpink; margin: 0% 5%;"></i>
+                  <div class="smallwrapper">
+                      <p class="toptext rin">30% Money Back</p>
+                      <p class="bottomtext rin">For Order Over $100</p>
+                  </div>
+              </div>
+
+                    
+                </div>
+            </div>
+        </section>
+         <!-- ===========THREE MAIN PHOTOS BOTTOM MOST ENDS FROM HERE================== -->
+         <!-- =============BOTTOM FOUR PICTURE STARTS FROM HERE================== -->
+         <div class="main_container flexbox rin">
+            <!-- ONE CARD -->
+            <div class="one_card rin">
+                    <img src="./images/blog-1.jpg" alt="">
+                <div class="textdetails">
+                    <p style="color: lightpink;">Fashion</p>
+                    <p class="detailsd">Clothes Retail KPIs 2021 guide for Clothes Executives.</p>
+                    <p class="bottomtext" style="color: grey;">By Mr Admin / Apr 06,2022</p>
+                </div>
+            </div>
+              <!-- ONE CARD -->
+               <!-- ONE CARD -->
+            <div class="one_card card1 rin">
+                <img src="./images/blog-4.jpg" alt="">
+            <div class="textdetails">
+                <p style="color: lightpink;">Fashion</p>
+                <p class="detailsd">Clothes Retail KPIs 2021 guide for Clothes Executives.</p>
+                <p class="bottomtext" style="color: grey;">By Mr Admin / Apr 06,2022</p>
+            </div>
+        </div>
+          <!-- ONE CARD -->
+           <!-- ONE CARD -->
+           <div class="one_card card2 rin">
+            <img src="./images/blog-3.jpg" alt="">
+        <div class="textdetails">
+            <p style="color: lightpink;">Fashion</p>
+            <p class="detailsd">Clothes Retail KPIs 2021 guide for Clothes Executives.</p>
+            <p class="bottomtext" style="color: grey;">By Mr Admin / Apr 06,2022</p>
+        </div>
+    </div>
+      <!-- ONE CARD -->
+       <!-- ONE CARD -->
+       <div class="one_card card3 rin">
+        <img src="./images/blog-2.jpg" alt="">
+    <div class="textdetails">
+        <p style="color: lightpink;">Fashion</p>
+        <p class="detailsd">Clothes Retail KPIs 2021 guide for Clothes Executives.</p>
+        <p class="bottomtext" style="color: grey;">By Mr Admin / Apr 06,2022</p>
+    </div>
+</div>
+  <!-- ONE CARD -->
+
+         </div>
+         <!-- =============BOTTOM FOUR PICTURE ENDS FROM HERE================== -->
+         <!-- =============FOOTER PART STARTS HERE=============================== -->
+         <footer>
+            <section class="branddirectory rin">
+                    <p style="color: lightpink; font-weight:bold;">BRAND DIRECTORY</p> 
+                    <ul class="lista">
+                        <li>FASHION :</li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                    </ul>
+                    <ul class="lista">
+                        <li>FASHION :</li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                    </ul>
+                    <ul class="lista">
+                        <li>FASHION :</li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                    </ul>
+                    <ul class="lista">
+                        <li>FASHION :</li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                        <li><a href="#">T-Shirt |</a></li>
+                    </ul>
+            </section>
+            <!-- VERTICAL LI -->
+            <section class="verticalli flexbox wrap rin"> 
+                <!-- ONE VERTICAL LIST -->
+            <div class="mainhead">
+                <p>POPULAR CATEGORY</p>
+                <ul>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Electronic</a></li>
+                    <li><a href="#">Cosmetic</a></li>
+                    <li><a href="#">Health</a></li>
+                    <li><a href="#">Watches</a></li>
+                </ul>
+            </div>
+             <!-- ONE VERTICAL LIST -->
+                <!-- ONE VERTICAL LIST -->
+            <div class="mainhead">
+                <p>POPULAR CATEGORY</p>
+                <ul>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Electronic</a></li>
+                    <li><a href="#">Cosmetic</a></li>
+                    <li><a href="#">Health</a></li>
+                    <li><a href="#">Watches</a></li>
+                </ul>
+            </div>
+             <!-- ONE VERTICAL LIST -->
+             <div class="mainhead">
+                <p>POPULAR CATEGORY</p>
+                <ul>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Electronic</a></li>
+                    <li><a href="#">Cosmetic</a></li>
+                    <li><a href="#">Health</a></li>
+                    <li><a href="#">Watches</a></li>
+                </ul>
+            </div>
+             <!-- ONE VERTICAL LIST -->
+             <div class="mainhead">
+                <p>POPULAR CATEGORY</p>
+                <ul>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Electronic</a></li>
+                    <li><a href="#">Cosmetic</a></li>
+                    <li><a href="#">Health</a></li>
+                    <li><a href="#">Watches</a></li>
+                </ul>
+            </div>
+             <!-- ONE VERTICAL LIST -->
+             <!-- ONE VERTICAL LIST -->
+             <div class="mainhead">
+                <p>POPULAR CATEGORY</p>
+                <ul>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Electronic</a></li>
+                    <li><a href="#">Cosmetic</a></li>
+                    <li><a href="#">Health</a></li>
+                    <li><a href="#">Watches</a></li>
+                </ul>
+            </div>
+             <!-- ONE VERTICAL LIST -->
+             <div class="mainhead connectwithus">
+                <p>FOLLOW US</p>
+                <ul>
+                    <i
+                    class="fa fa-facebook-square"
+                    style="font-size: 1.2em; color: rgb(150, 150, 150)"
+                  ></i>
+                  <i
+                    class="fa fa-twitter"                 style="font-size: 1.2em; color: rgb(150, 150, 150)"
+                  ></i>
+                  <i
+                    class="fa fa-instagram"
+                    style="font-size: 1.2em; color: rgb(150, 150, 150)"
+                  ></i>
+                  <i
+                    class="fa fa-linkedin-square"
+                    style="font-size: 1.2em; color: rgb(150, 150, 150)"
+                  ></i>
+                </ul>
+            </div>
+        </section>
+            <!-- VERTICAL LI -->
+            <section class="extlast flexbo">
+                <img src="./images/payment.png" alt="">
+                <p>Copyright &#169; E-Commerce All Right Reserved</p>
+            </section>
+         </footer>
+         <!-- =============FOOTER PART STARTS HERE=============================== -->
+         <div class="navbarbottom">
+            <i class="fa fa-bars" aria-hidden="true" style="font-size: 1.5em; color: rgb(150, 150, 150);" ></i>
+            <i class="fa fa-shopping-bag" aria-hidden="true" style="font-size: 1.5em; color: rgb(150, 150, 150);" ></i>
+            <i class="fa fa-home" aria-hidden="true" style="font-size: 1.5em; color: rgb(150, 150, 150);" ></i>
+            <i class="fa fa-heart" style="font-size: 1.5em; color: rgb(150, 150, 150)" ></i>
+            <i class="fa fa-plus-square" aria-hidden="true" ></i>
+            
+         </div>
+  </body>
+</html>
